@@ -1,5 +1,4 @@
 package com.example.demo;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +22,20 @@ public class CustomerServiceimpl implements IcustomerService{
 		return x;
 	
 	}
+	@Override
+	public Customer getOneCustomer(Integer id) {
+		// TODO Auto-generated method stub
+	java.util.Optional<Customer> opt = repo.findById(id);
+		
+		return opt.get();
+	}
+	@Override
+	public Customer updatecustomer(Customer upd) {
+		// TODO Auto-generated method stub
+		repo.save(upd);
+		return null;
+	}
+	
 	
 
 }

@@ -5,5 +5,7 @@ import java.util.List;
 public interface IcustomerService {
 public Integer savecustomer(Customer c);
 public List<Customer> AllCustomers();
-//public Customer getOneCourse(Integer id);
+public Customer getOneCustomer(Integer id); 
+public Customer updatecustomer(Customer upd);
+
 }
